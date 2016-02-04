@@ -12,3 +12,8 @@
 *.sass-cache*
 *~imageoptim*
 .htaccess
+node_modules
+src
+css
+gulpfile.js
+

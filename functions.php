@@ -140,13 +140,26 @@ require get_template_directory() . '/inc/template-tags.php';
  * Custom functions that act independently of the theme templates.
  */
 require get_template_directory() . '/inc/extras.php';
-
-/**
- * Customizer additions.
- */
-require get_template_directory() . '/inc/customizer.php';
-
-/**
+/*
  * Load Jetpack compatibility file.
  */
 require get_template_directory() . '/inc/jetpack.php';
+
+ /**
+ * Add image sizes
+ */
+
+ add_action( 'after_setup_theme', 'baw_theme_setup' );
+		function baw_theme_setup() {
+			add_image_size('xlarge-img', 1800);
+			add_image_size('large-img', 1200);
+			add_image_size('medium-img', 700);
+			add_image_size('medium-thumb-img', 700, 500, array('center','top'));
+			add_image_size('small-img', 500);
+			add_image_size('xsmall-img', 300);
+			add_image_size('large-thumb-img', 500, 350, array('center', 'top'));
+			add_image_size('thumb-img', 300, 200, array('center', 'top'));
+		}
+
+
+
