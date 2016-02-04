@@ -1,0 +1,65 @@
+@font-face {
+  font-family: lato-reg;  
+  src: url(fonts/Lato-Regular.ttf);  
+  font-weight: regular;  
+}
+@font-face {
+  font-family:lato-black;
+  src:url(fonts/Lato-Black.ttf);
+  font-weight:hairline;
+}
+@font-face {
+  font-family:locksmith;
+  src:url(fonts/Locksmith.otf);
+  font-weight:regular;
+}
+@font-face {
+  font-family:droid-serif;
+  src:url(fonts/DroidSerif.ttf);
+  font-weight:regular;
+}
+
+@font-face {
+  font-family:dense;
+  src:url(fonts/Dense-Regular.otf);
+  font-weight:regular;
+}
+$h-font:'dense', serif;
+$b-font:'lato-reg', serif;
+
+body {
+  font-family:$h-font;
+}
+
+h1{
+  font-size:2em;
+  text-transform:uppercase;
+  margin:0.67rem;
+}
+
+h2 {
+	font-size:3em;
+	text-transform:uppercase;
+	font-weight:700;
+  margin:1em;
+}
+h3 {
+  font-size:2em;
+  margin:1em 0 0 0;
+}
+h4 {
+  font-size:1.1em;
+}
+h5 {
+  font-size:1.1em;
+  font-style:italic;
+}
+p {
+  font-family:$b-font;
+  font-size:1.1em;
+  margin:1em 0 0 0;
+  line-height:1.7;
+}
+
+
+
