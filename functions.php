@@ -144,6 +144,11 @@ require get_template_directory() . '/inc/extras.php';
  * Load Jetpack compatibility file.
  */
 require get_template_directory() . '/inc/jetpack.php';
+/**
+ * Personal Functions
+ *
+ * 
+ */
 
  /**
  * Add image sizes
@@ -159,7 +164,24 @@ require get_template_directory() . '/inc/jetpack.php';
 			add_image_size('xsmall-img', 300);
 			add_image_size('large-thumb-img', 500, 350, array('center', 'top'));
 			add_image_size('thumb-img', 300, 200, array('center', 'top'));
+			add_image_size('thumb-center-medium', 600, 600, array('center', 'center'));
+			add_image_size('thumb-center-larg', 900, 900, array('center', 'center'));
 		}
 
+ /**
+ * Remove Filter
+ */
+add_filter('show_admin_bar', '__return_false');
 
+
+/**
+ * Script for advanced custom field google map
+ */
+
+function my_theme_add_scripts() {
+	wp_enqueue_script( 'google-map', 'https://maps.googleapis.com/maps/api/js?v=3.exp&sensor=false', array(), '3', true );
+	wp_enqueue_script( 'google-map-init', get_template_directory_uri() . '/library/js/google-maps.js', array('google-map', 'jquery'), '0.1', true );
+}
+ 
+add_action( 'wp_enqueue_scripts', 'my_theme_add_scripts' );
 
