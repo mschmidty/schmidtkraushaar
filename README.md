@@ -6,7 +6,7 @@ Add all of the custom fields created yesterday to it.
 
 Need to add this block of code to the page that I create for hotels:
 
-```
+```php
 <?php 
  
 $location = get_field('location');
